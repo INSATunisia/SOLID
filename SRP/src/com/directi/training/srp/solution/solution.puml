@@ -1,0 +1,21 @@
+@startuml Car
+class Car {
+    -_id
+    -_model
+    -_brand
+    ~Car(id:String, model:String, brand:String)
+    +getId()
+    +getModel()
+    +getBrand()
+    +toString()
+    +compareTo(car:Car)
+}
+class CarManager
+{   
+    -cars
+    ~CarManager(cars:List<Car>)
+    +getCarsNames()
+    +getBestCar()
+}
+CarManager--Car
+@enduml
